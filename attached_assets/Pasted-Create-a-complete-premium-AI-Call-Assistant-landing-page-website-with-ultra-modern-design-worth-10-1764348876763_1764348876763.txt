@@ -1,0 +1,440 @@
+Create a complete, premium AI Call Assistant landing page website with ultra-modern design worth $100,000+. This should be a full, production-ready website with all sections.
+
+═══════════════════════════════════════════════════════════════════
+
+DESIGN SYSTEM:
+- Color Palette: Primary Orange (#FF6B35), Dark Navy (#0A1128), White (#FFFFFF), Light Gray (#F8F9FA)
+- Typography: Inter or Sora for headings, Inter for body text
+- Spacing: Consistent 8px grid system
+- Animations: GSAP + Three.js + Framer Motion
+- Style: Ultra-modern, enterprise SaaS, glassmorphism, 3D elements
+
+═══════════════════════════════════════════════════════════════════
+
+COMPLETE WEBSITE STRUCTURE:
+
+1️⃣ NAVIGATION HEADER (Sticky)
+- Logo: "AI Call Assistant" with phone icon (left)
+- Menu items: Solutions, Pricing, Resources (center)
+- Actions: "Sign In" (text), "Contact Sales" (outlined), "Book a Demo" (orange filled)
+- Glassmorphism background with blur on scroll
+- Smooth hide/show on scroll direction
+- Mobile: Hamburger menu with smooth slide-in animation
+
+═══════════════════════════════════════════════════════════════════
+
+2️⃣ HERO SECTION (Full viewport height)
+
+LEFT SIDE (60% width):
+- Badge: "TRUSTED BY 2,500+ SALES TEAMS" 
+  * Subtle orange glow animation
+  * Pill shape with gradient background
+  * Pulsing effect every 2 seconds
+
+- Main Heading: "AI-Powered Sales Call Assistant"
+  * Split text animation on load
+  * Each word fades in sequentially
+  * Gradient text effect on "AI-Powered"
+  * Large, bold typography (64px)
+
+- Subheading: "Real-time coaching, smart scripts, and instant call summaries. Sound like a pro on every sales call with AI assistance."
+  * Fade in with blur effect
+  * Lighter weight font
+  * Max width for readability
+
+- CTA Buttons Row:
+  * "Start Free Trial" (primary orange, icon: sparkles)
+    - Hover: Lift effect, shadow expansion, glow
+    - Click: Ripple animation
+  * "Book Demo" (outlined white/orange)
+    - Hover: Fill animation from left
+    - Icon: Calendar or Play
+
+- Trust Indicators (with checkmark icons):
+  * "No credit card required"
+  * "14-day free access"
+  * Small, subtle text with green checkmarks
+
+- Feature Tabs (Horizontal pills):
+  * "01 Live Coaching" (Microphone icon)
+  * "02 Smart Scripts" (Document icon)
+  * "03 Auto-CRM" (Database icon)
+  * Stagger animation on load
+  * Hover: Highlight with smooth transition
+  * Active state: Orange background
+
+RIGHT SIDE (40% width):
+- 3D Floating Phone Mockup:
+  * iPhone-style mockup showing call interface
+  * Smooth rotation on mouse movement
+  * Subtle float animation (up/down)
+  
+- Floating UI Cards (glassmorphism):
+  * "Call Duration: 00:12:34" (top right)
+  * "AI Confidence: 94%" (middle right)
+  * "Next Best Action: Ask about budget" (bottom)
+  * Each card fades in/out periodically
+  * Smooth hover effects
+  
+- Waveform Visualization:
+  * Animated audio bars at bottom of phone
+  * Orange gradient bars
+  * Real-time pulsing effect
+
+BACKGROUND (Three.js):
+- OPTION A: Particle Neural Network
+  * 200-300 particles in 3D space
+  * Connected with glowing orange lines
+  * Particles pulse and breathe
+  * Mouse parallax movement
+  * Some particles shaped as phone/headset icons
+  * Depth of field blur effect
+  * Smooth camera rotation
+
+ANIMATIONS:
+- Load sequence: Badge (0.3s) → Heading (0.5s) → Subheading (0.8s) → CTAs (1s) → Features (1.2s) → Mockup (1.5s)
+- Continuous: Background particles, floating cards, glow pulses
+- Scroll: Parallax background, fade out content
+- Hover: Magnetic effect on buttons, card lift on features
+
+═══════════════════════════════════════════════════════════════════
+
+3️⃣ FEATURES SECTION
+
+Title: "Everything You Need to Close More Deals"
+Subtitle: "Powerful AI tools that transform every sales conversation"
+
+Feature Grid (3 columns, glassmorphism cards):
+
+Card 1: "Real-Time AI Coaching"
+- Icon: Headset with AI sparkles (animated)
+- Description: "Get instant suggestions, objection handling tips, and conversation guidance while you're on the call"
+- Visual: Animated screenshot/mockup
+- Hover: Card lifts, glow effect
+
+Card 2: "Smart Script Generation"
+- Icon: Document with AI stars
+- Description: "AI-powered scripts that adapt to your prospect's responses, industry, and pain points in real-time"
+- Visual: Script text animation
+- Hover: Text highlights animate
+
+Card 3: "Automatic CRM Updates"
+- Icon: Database with sync arrows
+- Description: "Call summaries, action items, and insights automatically synced to your CRM after every conversation"
+- Visual: Data flow animation
+- Hover: Sync animation plays
+
+Card 4: "Call Analytics Dashboard"
+- Icon: Chart trending up
+- Description: "Track performance metrics, conversion rates, and AI-powered insights to improve your sales technique"
+- Visual: Animated charts
+- Hover: Chart bars grow
+
+Card 5: "Voice & Tone Analysis"
+- Icon: Waveform with brain
+- Description: "Real-time feedback on your speaking pace, tone, and confidence to help you sound more persuasive"
+- Visual: Waveform visualization
+- Hover: Waves pulse
+
+Card 6: "Integration Hub"
+- Icon: Puzzle pieces connecting
+- Description: "Seamlessly connects with Salesforce, HubSpot, Zoom, and 50+ other tools in your sales stack"
+- Visual: Logo carousel
+- Hover: Logos orbit
+
+Animations:
+- Scroll trigger: Cards fade in with stagger
+- Continuous: Icon animations loop
+- Hover: Individual card effects
+
+═══════════════════════════════════════════════════════════════════
+
+4️⃣ HOW IT WORKS SECTION
+
+Title: "Get Started in 3 Simple Steps"
+
+Timeline (Horizontal on desktop, vertical on mobile):
+
+Step 1: "Connect Your Tools"
+- Large number "01" with gradient
+- Icon: Plug connecting
+- Description: "Link your CRM, calendar, and calling platform in under 2 minutes"
+- Visual: Connection animation with dotted lines
+
+Step 2: "Start Your First Call"
+- Number "02"
+- Icon: Phone ringing
+- Description: "Our AI joins your call and provides real-time coaching and suggestions"
+- Visual: Phone with AI assistant overlay
+
+Step 3: "Watch Your Results Improve"
+- Number "03"
+- Icon: Trophy or chart up
+- Description: "Track improvements in call quality, conversion rates, and deal velocity"
+- Visual: Animated success metrics
+
+Connecting Lines:
+- Animated dotted lines between steps
+- Orange gradient flow animation
+- Particles traveling along path
+
+Background:
+- Subtle grid pattern
+- Gradient overlay
+- Floating geometric shapes
+
+═══════════════════════════════════════════════════════════════════
+
+5️⃣ STATS/SOCIAL PROOF SECTION
+
+Background: Dark navy (#0A1128) with subtle pattern
+
+Title: "Trusted by Top Sales Teams Worldwide"
+
+Stats Grid (4 columns):
+- "2,500+ Sales Teams" (animate count-up)
+- "94% Win Rate Increase" (progress circle animation)
+- "12M+ Calls Analyzed" (animated counter)
+- "50+ Integrations" (icon grid animation)
+
+Company Logos:
+- Marquee scroll animation
+- Logos in grayscale, orange on hover
+- Infinite smooth loop
+- Include: Generic company logos (no real brands without permission)
+
+Testimonial Cards (Carousel/Grid):
+Card structure:
+- 5-star rating (animated stars)
+- Quote: "This AI assistant helped me close 40% more deals in the first month"
+- Name: "Sarah Johnson"
+- Title: "Senior Sales Manager"
+- Company: "TechCorp"
+- Avatar: Placeholder with gradient
+- Card: Glassmorphism with orange accent
+
+Carousel controls:
+- Auto-rotate every 5 seconds
+- Smooth slide transitions
+- Dot indicators
+- Hover to pause
+
+═══════════════════════════════════════════════════════════════════
+
+6️⃣ PRICING SECTION
+
+Title: "Choose Your Plan"
+Subtitle: "Start free, upgrade as you grow"
+
+Pricing Cards (3 columns):
+
+CARD 1 - STARTER:
+- Badge: "Most Popular" (orange)
+- Price: "$49/month"
+- Description: "Perfect for individual sales reps"
+- Features list (with checkmark icons):
+  * Up to 100 calls/month
+  * Real-time AI coaching
+  * Basic analytics
+  * CRM integration
+  * Email support
+- Button: "Start Free Trial" (outlined)
+- Hover: Lift effect
+
+CARD 2 - PROFESSIONAL (Highlighted):
+- Badge: "Best Value" (glowing orange)
+- Price: "$149/month"
+- Description: "For growing sales teams"
+- Everything in Starter, plus:
+  * Unlimited calls
+  * Advanced analytics
+  * Custom scripts
+  * Team collaboration
+  * Priority support
+  * API access
+- Button: "Start Free Trial" (filled orange, larger)
+- Card: Larger, more prominent
+- Glow effect
+- Hover: More lift, stronger shadow
+
+CARD 3 - ENTERPRISE:
+- Price: "Custom"
+- Description: "For large organizations"
+- Everything in Professional, plus:
+  * Dedicated account manager
+  * Custom integrations
+  * Advanced security
+  * SLA guarantee
+  * White-label option
+  * Training & onboarding
+- Button: "Contact Sales" (outlined)
+- Hover: Fill animation
+
+Toggle: Monthly / Annual (save 20%)
+- Animated switch
+- Price updates with smooth transition
+
+Background:
+- Subtle gradient
+- Animated grid lines
+- Floating shapes
+
+═══════════════════════════════════════════════════════════════════
+
+7️⃣ FAQ SECTION
+
+Title: "Frequently Asked Questions"
+
+Accordion Style FAQs (8-10 questions):
+- Question 1: "How does the AI coaching work during calls?"
+- Question 2: "Is my call data secure and private?"
+- Question 3: "What CRM platforms do you integrate with?"
+- Question 4: "Can I try it before committing?"
+- Question 5: "How long does setup take?"
+- Question 6: "Do you offer training for my team?"
+- Question 7: "What happens after the free trial?"
+- Question 8: "Can I cancel anytime?"
+
+Accordion behavior:
+- Click to expand/collapse
+- Smooth height transition
+- Orange accent line on active
+- Plus/minus icon rotation
+- Only one open at a time (optional)
+
+Styling:
+- Clean, minimal design
+- Glassmorphism cards
+- Hover effects
+- Mobile-friendly
+
+═══════════════════════════════════════════════════════════════════
+
+8️⃣ FINAL CTA SECTION
+
+Background: Orange gradient with particles
+
+Content (Centered):
+- Heading: "Ready to Transform Your Sales Calls?"
+- Subheading: "Join 2,500+ sales teams closing more deals with AI"
+- Large CTA: "Start Your Free Trial" (white button)
+- Secondary text: "No credit card required • 14-day trial • Cancel anytime"
+
+Visual:
+- Large 3D elements floating
+- Particle effects
+- Animated waves
+- Glow effects
+
+Animation:
+- Scroll trigger: Zoom in effect
+- Continuous: Particles move
+- Button: Pulse glow animation
+
+═══════════════════════════════════════════════════════════════════
+
+9️⃣ FOOTER
+
+Layout: Multi-column (4-5 columns)
+
+COLUMN 1 - BRAND:
+- Logo and name
+- Tagline: "AI-powered sales excellence"
+- Social icons: LinkedIn, Twitter, YouTube
+- Copyright: "© 2024 AI Call Assistant. All rights reserved."
+
+COLUMN 2 - PRODUCT:
+- Features
+- Pricing
+- Integrations
+- API Documentation
+- Changelog
+
+COLUMN 3 - RESOURCES:
+- Blog
+- Case Studies
+- Help Center
+- Video Tutorials
+- Webinars
+
+COLUMN 4 - COMPANY:
+- About Us
+- Careers
+- Press Kit
+- Contact
+- Partners
+
+COLUMN 5 - LEGAL:
+- Privacy Policy
+- Terms of Service
+- Security
+- GDPR Compliance
+
+Newsletter Signup:
+- Input: "Enter your email"
+- Button: "Subscribe" (orange)
+- Text: "Get sales tips and product updates"
+
+Styling:
+- Dark navy background
+- White/gray text
+- Orange hover effects
+- Organized, clean layout
+
+═══════════════════════════════════════════════════════════════════
+
+GLOBAL ANIMATIONS & INTERACTIONS:
+
+Scroll Animations (GSAP ScrollTrigger):
+- Fade in sections on scroll
+- Parallax background elements
+- Progress indicators
+- Smooth transitions between sections
+
+Micro-interactions:
+- Button hover effects (lift, glow, expand)
+- Link underline animations
+- Card hover (lift, shadow, scale)
+- Icon animations on hover
+- Cursor effects (trail, magnetic pull on buttons)
+
+Loading:
+- Smooth page load animation
+- Content reveal sequence
+- Skeleton loaders for async content
+
+Performance:
+- Lazy load images and heavy animations
+- Optimize Three.js (max 60fps)
+- Reduce motion support for accessibility
+- Mobile: Simplified animations
+- Progressive enhancement
+
+Responsive Design:
+- Desktop: Full animations and effects
+- Tablet: Simplified layout, reduced animations
+- Mobile: Stack columns, essential animations only
+- Touch-friendly interactions
+
+Accessibility:
+- ARIA labels on all interactive elements
+- Keyboard navigation support
+- Focus indicators
+- Reduced motion media query
+- Color contrast compliance (WCAG AA)
+
+═══════════════════════════════════════════════════════════════════
+
+TECHNICAL IMPLEMENTATION:
+
+Tech Stack:
+- React 18 with TypeScript
+- Vite for build tool
+- TailwindCSS for styling
+- Three.js + @react-three/fiber for 3D
+- GSAP for animations
+- Framer Motion for component transitions
+- Lucide React for icons
+- React Router for navigation (if multi-page)
+
+Project Structure:
