@@ -19,15 +19,15 @@ export function Navigation() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      
+
       setIsScrolled(currentScrollY > 50);
-      
+
       if (currentScrollY > lastScrollY && currentScrollY > 100) {
         setIsVisible(false);
       } else {
         setIsVisible(true);
       }
-      
+
       setLastScrollY(currentScrollY);
     };
 
@@ -48,11 +48,7 @@ export function Navigation() {
       initial={{ y: 0 }}
       animate={{ y: isVisible ? 0 : -100 }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "glass-dark py-3"
-          : "bg-transparent py-5"
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-black/40 backdrop-blur-md border-b border-white/5 py-6"
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-4">
@@ -104,7 +100,7 @@ export function Navigation() {
               Contact Sales
             </Button>
             <Button
-              className="gradient-orange text-white glow-orange-sm hover:glow-orange transition-all duration-300"
+              className="bg-gradient-to-b from-neutral-800 to-neutral-900 border border-white/10 hover:border-white/20 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(255,255,255,0.15)] transition-all duration-300"
               data-testid="button-book-demo"
             >
               Book a Demo
@@ -170,6 +166,11 @@ export function Navigation() {
           </Sheet>
         </div>
       </nav>
+
+      {/* Animated Linear Divider */}
+      <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-white/5 overflow-hidden">
+        <div className="absolute top-0 bottom-0 w-1/4 bg-gradient-to-r from-transparent via-orange-500 to-transparent animate-scan-line" />
+      </div>
     </motion.header>
   );
 }
