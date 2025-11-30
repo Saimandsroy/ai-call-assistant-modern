@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Check, X, Minus } from "lucide-react";
+import { Check, Minus, ChevronRight } from "lucide-react";
+import { useState } from "react";
 
 const features = [
     "Real-time AI Coaching",
@@ -19,20 +20,29 @@ const comparisonData = {
     traditional: [false, false, false, false, false, false, false, "N/A"],
 };
 
+const competitors = [
+    { key: "us", name: "AI Call Assistant", badge: "RECOMMENDED", tagline: "Best Value" },
+    { key: "competitorA", name: "Competitor A" },
+    { key: "competitorB", name: "Competitor B" },
+    { key: "traditional", name: "Traditional" },
+];
+
 export function Comparison() {
+    const [selectedCompetitor, setSelectedCompetitor] = useState(0);
+
     return (
-        <section id="comparison" className="py-24 lg:py-32 bg-[#0A0A0A] relative overflow-hidden">
+        <section id="comparison" className="py-16 md:py-24 lg:py-32 bg-[#0A0A0A] relative overflow-hidden">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-[1400px]">
                 {/* Header */}
-                <div className="text-center max-w-3xl mx-auto mb-20">
+                <div className="text-center max-w-3xl mx-auto mb-12 md:mb-20">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-orange-500/20 bg-orange-500/10 mb-8 backdrop-blur-sm"
+                        className="inline-flex items-center gap-2 px-3 md:px-4 py-1.5 md:py-2 rounded-full border border-orange-500/20 bg-orange-500/10 mb-6 md:mb-8 backdrop-blur-sm"
                     >
-                        <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse" />
-                        <span className="text-sm font-bold tracking-widest text-orange-400 uppercase">Why Choose Us</span>
+                        <span className="w-1.5 md:w-2 h-1.5 md:h-2 rounded-full bg-orange-500 animate-pulse" />
+                        <span className="text-xs md:text-sm font-bold tracking-widest text-orange-400 uppercase">Why Choose Us</span>
                     </motion.div>
 
                     <motion.h2
@@ -40,9 +50,9 @@ export function Comparison() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight"
+                        className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 md:mb-6 tracking-tight px-4"
                     >
-                        See How We Stack Up <br />
+                        See How We Stack Up <br className="hidden sm:block" />
                         <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-orange-200">
                             Against the Competition
                         </span>
@@ -53,18 +63,82 @@ export function Comparison() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="text-xl text-neutral-400 max-w-2xl mx-auto"
+                        className="text-base md:text-lg lg:text-xl text-neutral-400 max-w-2xl mx-auto px-4"
                     >
                         The most comprehensive AI call assistant at the best value.
                     </motion.p>
                 </div>
 
-                {/* Comparison Table Card */}
+                {/* Mobile: Swipeable Cards */}
+                <div className="lg:hidden">
+                    {/* Competitor Selector */}
+                    <div className="flex gap-2 mb-6 overflow-x-auto pb-2 px-4 scrollbar-hide">
+                        {competitors.map((comp, index) => (
+                            <button
+                                key={comp.key}
+                                onClick={() => setSelectedCompetitor(index)}
+                                className={`flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium transition-all ${selectedCompetitor === index
+                                        ? "bg-orange-500 text-white"
+                                        : "bg-white/5 text-white/60 hover:bg-white/10"
+                                    }`}
+                            >
+                                {comp.name}
+                            </button>
+                        ))}
+                    </div>
+
+                    {/* Selected Competitor Card */}
+                    <motion.div
+                        key={selectedCompetitor}
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        className="glass-card p-6 rounded-2xl border border-white/10 mx-4"
+                    >
+                        {competitors[selectedCompetitor].badge && (
+                            <div className="inline-block bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">
+                                {competitors[selectedCompetitor].badge}
+                            </div>
+                        )}
+                        <h3 className="text-xl font-bold text-white mb-2">{competitors[selectedCompetitor].name}</h3>
+                        {competitors[selectedCompetitor].tagline && (
+                            <p className="text-orange-400 font-bold mb-4">{competitors[selectedCompetitor].tagline}</p>
+                        )}
+                        {selectedCompetitor === 0 && (
+                            <button className="w-full py-3 rounded-lg bg-orange-500 text-white font-bold text-sm hover:bg-orange-600 transition-colors mb-6">
+                                Start Free Trial
+                            </button>
+                        )}
+
+                        <div className="space-y-3">
+                            {features.map((feature, i) => (
+                                <div key={feature} className="flex items-center justify-between py-3 border-b border-white/5">
+                                    <span className="text-white/80 text-sm">{feature}</span>
+                                    <div className="ml-4">
+                                        {renderCell(comparisonData[competitors[selectedCompetitor].key as keyof typeof comparisonData][i], selectedCompetitor === 0)}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </motion.div>
+
+                    <div className="flex justify-center gap-2 mt-6">
+                        {competitors.map((_, index) => (
+                            <button
+                                key={index}
+                                onClick={() => setSelectedCompetitor(index)}
+                                className={`w-2 h-2 rounded-full transition-all ${selectedCompetitor === index ? "bg-orange-500 w-8" : "bg-white/20"
+                                    }`}
+                            />
+                        ))}
+                    </div>
+                </div>
+
+                {/* Desktop: Full Table */}
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="overflow-x-auto pb-4"
+                    className="hidden lg:block overflow-x-auto pb-4"
                 >
                     <div className="min-w-[1000px] grid grid-cols-5 gap-4">
                         {/* Column Headers */}
@@ -124,14 +198,14 @@ export function Comparison() {
 
 function renderCell(value: boolean | string, isPrimary = false) {
     if (typeof value === "string") {
-        return <span className={`font-bold ${isPrimary ? "text-white" : "text-white/40"}`}>{value}</span>;
+        return <span className={`font-bold text-sm ${isPrimary ? "text-white" : "text-white/40"}`}>{value}</span>;
     }
     if (value) {
         return (
-            <div className={`w-8 h-8 rounded-full flex items-center justify-center ${isPrimary ? "bg-orange-500 text-white" : "bg-white/10 text-white"}`}>
-                <Check className="w-5 h-5" />
+            <div className={`w-7 h-7 md:w-8 md:h-8 rounded-full flex items-center justify-center flex-shrink-0 ${isPrimary ? "bg-orange-500 text-white" : "bg-white/10 text-white"}`}>
+                <Check className="w-4 h-4 md:w-5 md:h-5" />
             </div>
         );
     }
-    return <Minus className="w-6 h-6 text-white/20" />;
+    return <Minus className="w-5 h-5 md:w-6 md:h-6 text-white/20 flex-shrink-0" />;
 }
